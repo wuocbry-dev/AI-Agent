@@ -16,7 +16,7 @@ class TestSettings:
 
     def test_project_name_is_set(self):
         """Test project name is configured."""
-        assert settings.PROJECT_NAME == "demo_run_20260425"
+        assert settings.PROJECT_NAME == "AI_agent_run"
 
     def test_api_v1_str_is_set(self):
         """Test API version string is set."""

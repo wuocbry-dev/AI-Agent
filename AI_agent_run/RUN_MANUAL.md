@@ -1,19 +1,19 @@
 # Huong Dan Chay Thu Cong
 
-File nay huong dan chay project `demo_run_20260425` bang terminal VS Code, PowerShell hoac CMD.
+File nay huong dan chay project `AI_agent_run` bang terminal VS Code, PowerShell hoac CMD.
 
 ## 1. Mo dung thu muc backend
 
 Tu PowerShell:
 
 ```powershell
-cd D:\GitHup-wuocbry-dev\full-stack-ai-agent-template\demo_run_20260425\backend
+cd D:\GitHup-wuocbry-dev\AI-Agent\AI_agent_run\backend
 ```
 
 Tu CMD:
 
 ```cmd
-cd /d D:\GitHup-wuocbry-dev\full-stack-ai-agent-template\demo_run_20260425\backend
+cd /d D:\GitHup-wuocbry-dev\AI-Agent\AI_agent_run\backend
 ```
 
 ## 2. Kiem tra file moi truong
@@ -116,13 +116,13 @@ Stop-Process -Id 25484 -Force
 Project nay dung SQLite, database nam tai:
 
 ```text
-backend\data\demo_run_20260425.db
+backend\data\AI_agent_run.db
 ```
 
 Duong dan database duoc cau hinh trong `.env`:
 
 ```env
-SQLITE_PATH=./data/demo_run_20260425.db
+SQLITE_PATH=./data/AI_agent_run.db
 ```
 
 Neu database da duoc tao va migrate roi thi chi can chay server.

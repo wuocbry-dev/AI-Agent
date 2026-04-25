@@ -28,7 +28,7 @@ class Settings(BaseSettings):
     )
 
     # === Project ===
-    PROJECT_NAME: str = "demo_run_20260425"
+    PROJECT_NAME: str = "AI_agent_run"
     API_V1_STR: str = "/api/v1"
     DEBUG: bool = False
     ENVIRONMENT: Literal["development", "local", "staging", "production"] = "local"
@@ -38,7 +38,7 @@ class Settings(BaseSettings):
     MAX_UPLOAD_SIZE_MB: int = 50  # Max file upload size in MB
 
     # === Database (SQLite sync) ===
-    SQLITE_PATH: str = "./data/demo_run_20260425.db"
+    SQLITE_PATH: str = "./data/AI_agent_run.db"
 
     @computed_field  # type: ignore[prop-decorator]
     @property

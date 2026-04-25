@@ -3,6 +3,63 @@ revision = 3
 requires-python = ">=3.12"
 
 [[package]]
+name = "ai-agent-run"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "alembic" },
+    { name = "bcrypt" },
+    { name = "click" },
+    { name = "fastapi" },
+    { name = "pydantic", extra = ["email"] },
+    { name = "pydantic-ai-slim", extra = ["duckduckgo", "openai", "web-fetch"] },
+    { name = "pydantic-settings" },
+    { name = "pyjwt" },
+    { name = "python-multipart" },
+    { name = "sqlalchemy" },
+    { name = "tabulate" },
+    { name = "tqdm" },
+    { name = "uvicorn", extra = ["standard"] },
+]
+
+[package.optional-dependencies]
+dev = [
+    { name = "anyio", extra = ["trio"] },
+    { name = "httpx" },
+    { name = "pre-commit" },
+    { name = "pytest" },
+    { name = "pytest-cov" },
+    { name = "ruff" },
+    { name = "ty" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "alembic", specifier = ">=1.18.0" },
+    { name = "anyio", extras = ["trio"], marker = "extra == 'dev'", specifier = ">=4.9.0" },
+    { name = "bcrypt", specifier = ">=4.0.0" },
+    { name = "click", specifier = ">=8.1.0" },
+    { name = "fastapi", specifier = ">=0.135.3" },
+    { name = "httpx", marker = "extra == 'dev'", specifier = ">=0.28.0" },
+    { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=4.0.0" },
+    { name = "pydantic", extras = ["email"], specifier = ">=2.12.0" },
+    { name = "pydantic-ai-slim", extras = ["openai", "duckduckgo", "web-fetch"], specifier = ">=1.80.0" },
+    { name = "pydantic-settings", specifier = ">=2.13.0" },
+    { name = "pyjwt", specifier = ">=2.9.0" },
+    { name = "pytest", marker = "extra == 'dev'", specifier = ">=9.0.0" },
+    { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=6.1.0" },
+    { name = "python-multipart", specifier = ">=0.0.12" },
+    { name = "python-multipart", specifier = ">=0.0.20" },
+    { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.15.0" },
+    { name = "sqlalchemy", specifier = ">=2.0.40" },
+    { name = "tabulate", specifier = ">=0.9.0" },
+    { name = "tqdm", specifier = ">=4.66.0" },
+    { name = "ty", marker = "extra == 'dev'", specifier = ">=0.0.29" },
+    { name = "uvicorn", extras = ["standard"], specifier = ">=0.43.0" },
+]
+provides-extras = ["dev"]
+
+[[package]]
 name = "alembic"
 version = "1.18.4"
 source = { registry = "https://pypi.org/simple" }
@@ -372,63 +429,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/c9/f2/aa1f5af106ea0ef03
 wheels = [
     { url = "https://files.pythonhosted.org/packages/4f/a0/c0b568acd6ec819ec94ecfd4eebd00edc855efab06e589ad17d0412ff4ce/ddgs-9.14.1-py3-none-any.whl", hash = "sha256:e6b853be092532add9c0d611c4b121f0b27092de66756401057c2100f6b1ab44", size = 67019, upload-time = "2026-04-20T12:09:19.867Z" },
 ]
-
-[[package]]
-name = "demo-run-20260425"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "alembic" },
-    { name = "bcrypt" },
-    { name = "click" },
-    { name = "fastapi" },
-    { name = "pydantic", extra = ["email"] },
-    { name = "pydantic-ai-slim", extra = ["duckduckgo", "openai", "web-fetch"] },
-    { name = "pydantic-settings" },
-    { name = "pyjwt" },
-    { name = "python-multipart" },
-    { name = "sqlalchemy" },
-    { name = "tabulate" },
-    { name = "tqdm" },
-    { name = "uvicorn", extra = ["standard"] },
-]
-
-[package.optional-dependencies]
-dev = [
-    { name = "anyio", extra = ["trio"] },
-    { name = "httpx" },
-    { name = "pre-commit" },
-    { name = "pytest" },
-    { name = "pytest-cov" },
-    { name = "ruff" },
-    { name = "ty" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "alembic", specifier = ">=1.18.0" },
-    { name = "anyio", extras = ["trio"], marker = "extra == 'dev'", specifier = ">=4.9.0" },
-    { name = "bcrypt", specifier = ">=4.0.0" },
-    { name = "click", specifier = ">=8.1.0" },
-    { name = "fastapi", specifier = ">=0.135.3" },
-    { name = "httpx", marker = "extra == 'dev'", specifier = ">=0.28.0" },
-    { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=4.0.0" },
-    { name = "pydantic", extras = ["email"], specifier = ">=2.12.0" },
-    { name = "pydantic-ai-slim", extras = ["openai", "duckduckgo", "web-fetch"], specifier = ">=1.80.0" },
-    { name = "pydantic-settings", specifier = ">=2.13.0" },
-    { name = "pyjwt", specifier = ">=2.9.0" },
-    { name = "pytest", marker = "extra == 'dev'", specifier = ">=9.0.0" },
-    { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=6.1.0" },
-    { name = "python-multipart", specifier = ">=0.0.12" },
-    { name = "python-multipart", specifier = ">=0.0.20" },
-    { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.15.0" },
-    { name = "sqlalchemy", specifier = ">=2.0.40" },
-    { name = "tabulate", specifier = ">=0.9.0" },
-    { name = "tqdm", specifier = ">=4.66.0" },
-    { name = "ty", marker = "extra == 'dev'", specifier = ">=0.0.29" },
-    { name = "uvicorn", extras = ["standard"], specifier = ">=0.43.0" },
-]
-provides-extras = ["dev"]
 
 [[package]]
 name = "distlib"

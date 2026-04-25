@@ -38,47 +38,47 @@ test-cov:
 
 # === Database ===
 db-init:
-	cd backend && uv run demo_run_20260425 db migrate -m "initial" || true
-	cd backend && uv run demo_run_20260425 db upgrade
+	cd backend && uv run AI_agent_run db migrate -m "initial" || true
+	cd backend && uv run AI_agent_run db upgrade
 	@echo ""
 	@echo "✅ Database initialized!"
 
 db-migrate:
 	@read -p "Migration message: " msg; \
-	uv run --directory backend demo_run_20260425 db migrate -m "$$msg"
+	uv run --directory backend AI_agent_run db migrate -m "$$msg"
 
 db-upgrade:
-	uv run --directory backend demo_run_20260425 db upgrade
+	uv run --directory backend AI_agent_run db upgrade
 
 db-downgrade:
-	uv run --directory backend demo_run_20260425 db downgrade
+	uv run --directory backend AI_agent_run db downgrade
 
 db-current:
-	uv run --directory backend demo_run_20260425 db current
+	uv run --directory backend AI_agent_run db current
 
 db-history:
-	uv run --directory backend demo_run_20260425 db history
+	uv run --directory backend AI_agent_run db history
 
 # === Server ===
 run:
-	uv run --directory backend demo_run_20260425 server run --reload
+	uv run --directory backend AI_agent_run server run --reload
 
 run-prod:
-	uv run --directory backend demo_run_20260425 server run --host 0.0.0.0 --port 8000
+	uv run --directory backend AI_agent_run server run --host 0.0.0.0 --port 8000
 
 routes:
-	uv run --directory backend demo_run_20260425 server routes
+	uv run --directory backend AI_agent_run server routes
 
 # === Users ===
 create-admin:
 	@echo "Creating admin user..."
-	uv run --directory backend demo_run_20260425 user create-admin
+	uv run --directory backend AI_agent_run user create-admin
 
 user-create:
-	uv run --directory backend demo_run_20260425 user create
+	uv run --directory backend AI_agent_run user create
 
 user-list:
-	uv run --directory backend demo_run_20260425 user list
+	uv run --directory backend AI_agent_run user list
 
 # === Cleanup ===
 clean:
@@ -91,7 +91,7 @@ clean:
 # === Help ===
 help:
 	@echo ""
-	@echo "demo_run_20260425 - Available Commands"
+	@echo "AI_agent_run - Available Commands"
 	@echo "======================================"
 	@echo ""
 	@echo "Setup:"

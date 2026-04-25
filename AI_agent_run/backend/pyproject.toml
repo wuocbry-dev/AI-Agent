@@ -1,5 +1,5 @@
 [project]
-name = "demo_run_20260425"
+name = "AI_agent_run"
 version = "0.1.0"
 description = "A FastAPI project"
 requires-python = ">=3.12"
@@ -37,7 +37,7 @@ dev = [
 ]
 
 [project.scripts]
-demo_run_20260425 = "cli.commands:main"
+AI_agent_run = "cli.commands:main"
 
 [build-system]
 requires = ["hatchling"]

@@ -13,7 +13,7 @@ This repository contains the generator source code and the cookiecutter template
 | `template/VARIABLES.md` | Documentation for template variables |
 | `tests/` | Test suite for CLI, config, generator, template docs, and integrations |
 | `docs/` | MkDocs documentation for the generator |
-| `demo_run_20260425/` | Active generated demo project for local manual testing |
+| `AI_agent_run/` | Active generated demo project for local manual testing |
 | `AGENTS.md` | Rules for AI coding agents working in this repo |
 
 ## Setup
@@ -82,7 +82,7 @@ The active local demo is recorded in:
 Current manual run instructions are in:
 
 ```text
-demo_run_20260425/RUN_MANUAL.md
+AI_agent_run/RUN_MANUAL.md
 ```
 
 Typical backend run command from the demo backend directory:
@@ -153,4 +153,4 @@ Read `AGENTS.md` before editing. In particular:
 
 - Do not delete source, template, tests, active demo data, `.env`, `.venv`, or `data/` without explicit confirmation.
 - Before cleanup tasks, classify files as source, docs, active demo, inactive demo, local environment, cache, logs, or build output.
-- Keep `demo_run_20260425/RUN_MANUAL.md` because it is the current manual run reference.
+- Keep `AI_agent_run/RUN_MANUAL.md` because it is the current manual run reference.

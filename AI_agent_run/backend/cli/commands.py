@@ -5,9 +5,9 @@ from tabulate import tabulate
 
 
 @click.group()
-@click.version_option(version="0.1.0", prog_name="demo_run_20260425")
+@click.version_option(version="0.1.0", prog_name="AI_agent_run")
 def cli():
-    """demo_run_20260425 management CLI."""
+    """AI_agent_run management CLI."""
     pass
 
 

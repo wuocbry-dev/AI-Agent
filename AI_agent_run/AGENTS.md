@@ -4,7 +4,7 @@ This file provides guidance for AI coding agents (Codex, Copilot, Cursor, Zed, O
 
 ## Project Overview
 
-**demo_run_20260425** - FastAPI application generated with [Full-Stack AI Agent Template](https://github.com/vstorm-co/full-stack-ai-agent-template).
+**AI_agent_run** - FastAPI application generated with [Full-Stack AI Agent Template](https://github.com/vstorm-co/full-stack-ai-agent-template).
 
 **Stack:** FastAPI + Pydantic v2, SQLite
 , JWT + API Key auth
